@@ -6,9 +6,9 @@ int posicao(int mat[3][3]){
 	int lin = 0;
 	int col = 0;
 	
-	for(lin = 0; lin < 3; lin++){
+	for(lin = 1; lin < 3; lin++){
 		for(col = 0; col < 3; col++){
-			if(mat[lin - 1][col - 1] > mat[lin][col])
+			if(mat[lin - 1][col] > mat[lin][col])
 				cont++;
 		}
 	}
@@ -30,5 +30,7 @@ int main(){
 		}
 	}
 	
-	cout << endl << "Resultado: " << posicao(vet);
+	cout << posicao(vet);
 }
+
+ 
