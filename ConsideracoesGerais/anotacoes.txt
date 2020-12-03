@@ -1,0 +1,3 @@
+Comandos para compilar e executar codigos por linhas de comando:
+    --> gcc seucodigo.c -o seuprograma.
+    --> ./seuprograma
