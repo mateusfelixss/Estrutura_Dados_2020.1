@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 double fatorial(int n){
@@ -16,8 +17,8 @@ double fatorial(int n){
 double euler(int number){
 	double eul = 0;
 																															
-	for(int i = 0; i <= number; i++){
-		eul = eul + (1/fatorial(i));
+	for(int i = 1; i <= number; i++){
+		eul = eul  + (1/fatorial(i));
 	
 	}
 	
@@ -25,11 +26,11 @@ double euler(int number){
 }																																																																																																																																																																				
 																											
 int main(){
-	double result;
+	double n;
 	
-	result = euler(10);
-
-	cout << result << endl;
+	//n = euler(10);
+	cin >> n;
+	cout <<std::setprecision(7) << euler(n) << endl;
 	//int result2;
 	//int result3;
 	//int result4;
