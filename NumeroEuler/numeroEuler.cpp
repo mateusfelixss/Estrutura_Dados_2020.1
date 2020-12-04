@@ -4,7 +4,7 @@ using namespace std;
 
 double fatorial(int n){
 	double fat = 1;
-	if(n > 2){	
+	if(n >= 2){	
 		for(int i = 1; i <= n; i++){
 			fat = fat * i;
 		}
@@ -17,7 +17,7 @@ double fatorial(int n){
 double euler(int number){
 	double eul = 0;
 																															
-	for(int i = 1; i <= number; i++){
+	for(int i = 0; i <= number; i++){
 		eul = eul  + (1/fatorial(i));
 	
 	}
@@ -30,7 +30,7 @@ int main(){
 	
 	//n = euler(10);
 	cin >> n;
-	cout <<std::setprecision(7) << euler(n) << endl;
+	cout << std::fixed <<std::setprecision(6) << euler(n) << endl;
 	//int result2;
 	//int result3;
 	//int result4;
