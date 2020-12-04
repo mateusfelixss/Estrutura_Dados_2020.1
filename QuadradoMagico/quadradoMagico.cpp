@@ -13,6 +13,13 @@ void quadradoMagico (int vet[3][3]){
 	
 	for(int linha = 0; linha < 3; linha++){
 		for(int coluna = 0; coluna < 3; coluna++){
+			
+		}
+	}
+
+
+	for(int linha = 0; linha < 3; linha++){
+		for(int coluna = 0; coluna < 3; coluna++){
 			if(vet[0][coluna])										//soma elementos da linha 01
 				somaLinha01 += vet[0][coluna];
 				
@@ -41,27 +48,27 @@ void quadradoMagico (int vet[3][3]){
 		}
 	}
 	
-	// int totalLinhas = 0;
-	// int totalColunas = 0;
-	// int totalDiagonais = 0;
+	int totalLinhas = 0;
+	int totalColunas = 0;
+	int totalDiagonais = 0;
 
 
 	
-	// totalLinhas = somaLinha01 + somaLinha02 + somaLinha03;
-	// totalColunas = somaColuna01 + somaColuna02 + somaColuna03;
-	// totalDiagonais = diagonalPri + diagonalSec;
+	totalLinhas = somaLinha01 + somaLinha02 + somaLinha03;
+	totalColunas = somaColuna01 + somaColuna02 + somaColuna03;
+	totalDiagonais = diagonalPri + diagonalSec;
 	
-	// cout << "Total Linhas: " << totalLinhas << endl;
-	// cout << "Total Colunas: " << totalColunas << endl;
-	// cout << "Total Diagonais: " << totalDiagonais << endl;
-	// cout << "Total Diagonal Principal: " << diagonalPri << endl;
-	// cout << "Total Diagonal Secundaria: " << diagonalSec << endl;
-	// cout << "Total Linha 01: " << somaLinha01 << endl;
-	// cout << "Total Linha 02: " << somaLinha02 << endl;
-	// cout << "Total Linha 03: " << somaLinha03 << endl;
-	// cout << "Total Coluna 01: " << somaColuna01 << endl;
-	// cout << "Total Coluna 02: " << somaColuna02 << endl;
-	// cout << "Total Coluna 03: " << somaColuna03 << endl;
+	cout << "Total Linhas: " << totalLinhas << endl;
+	cout << "Total Colunas: " << totalColunas << endl;
+	cout << "Total Diagonais: " << totalDiagonais << endl;
+	cout << "Total Diagonal Principal: " << diagonalPri << endl;
+	cout << "Total Diagonal Secundaria: " << diagonalSec << endl;
+	cout << "Total Linha 01: " << somaLinha01 << endl;
+	cout << "Total Linha 02: " << somaLinha02 << endl;
+	cout << "Total Linha 03: " << somaLinha03 << endl;
+	cout << "Total Coluna 01: " << somaColuna01 << endl;
+	cout << "Total Coluna 02: " << somaColuna02 << endl;
+	cout << "Total Coluna 03: " << somaColuna03 << endl;
 	
 	// if((totalLinhas == totalColunas) == totalDiagonais)
 	// 	cout << "SIM";
@@ -83,17 +90,23 @@ void quadradoMagico (int vet[3][3]){
 
 
 int main(){
-	int vet[3][3] = 
-	
-	
-	
-					{{1, 2, 3},
-                    {4, 5, 6},
-                    {7, 8, 9}};
-
+	int vet[3][3] = {{8, 1, 6},
+					 {3, 5, 7},
+					 {4, 9, 2}};
+					
+					
+					
 					// {{2, 7, 6},
                     // {9, 5, 1},
                     // {4, 3, 8}};
+	
+
+	
+					// {{1, 2, 3},
+                    // {4, 5, 6},
+                    // {7, 8, 9}};
+
+					
 	int linha = 0; 
 	int coluna = 0;
 	int number = 0;
