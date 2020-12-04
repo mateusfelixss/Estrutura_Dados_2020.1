@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 struct Aluno
@@ -13,12 +14,16 @@ void registro(Aluno estudante){
     
     cout << "Digite nome do aluno: ";
     cin >> estudante.nome;
+  //  std::cin.ignore(256, '\n');
     cout << "Digite matricula do aluno: ";
     cin >> estudante.matricula;
+    std::cin.ignore(256, '\n');
     cout << "Digite disciplina do aluno: ";
     cin >> estudante.disciplina;
+ //   std::cin.ignore(256, '\n');
     cout << "Digite nota do aluno: ";
     cin >> estudante.nota;
+    std::cin.ignore(256, '\n');
 }
 void status(Aluno estud){
     if(estud.nota >= 7)
@@ -29,11 +34,12 @@ void status(Aluno estud){
 
 int main(){
     Aluno student;
-    student.disciplina = "ed";
-    student.nome = "mateus";
-    student.nota = 9;
-    student.matricula = 987;
+    //  student.disciplina = "ed";
+    //  student.nome = "mateus";
+    //  student.nota = 5;
+    //  student.matricula = 987;
 
-    //registro(student);
+    registro(student);
+    cout << student.nota << endl << student.nome << endl;
     status(student);
 }
