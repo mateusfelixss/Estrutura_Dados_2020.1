@@ -36,25 +36,13 @@ void status(Aluno estud){
 
 int main(){
     Aluno student;
-    //  student.disciplina = "ed";
-    //  student.nome = "mateus";
-    //  student.nota = 5;
-    //  student.matricula = 987;
+    
+    cin >> student.nome;
+    cin >> student.matricula;
+    cin >> student.disciplina;
+    cin >> student.nota;
+ 
 
-//     cout << "Digite nome do aluno: ";
-//     cin >> student.nome;
-//   //  std::cin.ignore(256, '\n');
-//     cout << "Digite matricula do aluno: ";
-//     cin >> student.matricula;
-//   //  std::cin.ignore(256, '\n');
-//     cout << "Digite disciplina do aluno: ";
-//     cin >> student.disciplina;
-//  //   std::cin.ignore(256, '\n');
-//     cout << "Digite nota do aluno: ";
-//     cin >> student.nota;
-//   //  std::cin.ignore(256, '\n');
-
-    registro(student);
-    cout << student.nota << endl << student.nome << endl;
+    //registro(student);
     status(student);
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 struct Aluno
@@ -25,28 +26,27 @@ void recebeAluno(Aluno discenteA, Aluno discenteB){
 
 
 void maiorNota(Aluno estudanteA, Aluno estudanteB){
-    recebeAluno(estudanteA, estudanteB);
 
     if(estudanteA.nota > estudanteB.nota)
-        cout << estudanteA.nome << " , " << estudanteA.nota;
+        cout << fixed << setprecision(1) << estudanteA.nome << " , " << estudanteA.nota;
     else if(estudanteB.nota > estudanteA.nota)
-        cout << estudanteB.nome << " , " << estudanteB.nota;
+        cout << fixed << setprecision(1) << estudanteB.nome << " , " << fixed << setprecision(1) << estudanteB.nota;
     else
-        cout << estudanteA.nome << " e " << estudanteB.nome << " , " << estudanteA.nota;
+        cout << fixed << setprecision(1) << estudanteA.nome << " e " << fixed << setprecision(1) << estudanteB.nome << " , " << estudanteA.nota;
 }
 int main (){
 Aluno studentA;
 Aluno studentB;
 
-// studentA.nome = "mateus";
-// studentA.matricula = 123;
-// studentA.disciplina = "ed";
-// studentA.nota = 0;
+cin >> studentA.nome;
+cin >> studentA.matricula;
+cin >> studentA.disciplina;
+cin >> studentA.nota;
 
-// studentB.nome = "felix";
-// studentB.matricula = 123;
-// studentB.disciplina = "ed";
-// studentB.nota = 9;
+cin >> studentB.nome;
+cin >> studentB.matricula;
+cin >> studentB.disciplina;
+cin >> studentB.nota;
 
 //recebeAluno(studentA, studentB);
 maiorNota(studentA, studentB);
