@@ -9,8 +9,7 @@ struct aluno {
    float media;
 };
 
-aluno le_aluno()
-{
+aluno le_aluno(){
     aluno a;
     cin >> a.matricula;
     cin.ignore(); // lê e descarta o caractere '\n' do buffer 
@@ -32,8 +31,18 @@ Pseudocódigo:
    aumente em 1 o tamanho do vetor (incrementar *n)
    retorne v
 */
-aluno* insere_aluno(aluno *v, int *n, aluno novo)
-{
+aluno* insere_aluno(aluno *v, int *n, aluno novo){
+
+   aluno *v = new (std::nothrow) aluno[*n + 1];
+
+   if (v == nullptr) {
+      cout << "Erro: não foi possível alocar memória.";
+      return 0;
+   }
+
+   for(int i = 0; i < *n; i++){
+      v[i] = new aluno novo;
+   }
 
 }
 
@@ -54,13 +63,11 @@ Pseudocódigo:
          break
    retorne o endereço de memória do vetor realocado
 */
-aluno* remove_aluno(aluno *v, int *n, int matricula)
-{
+aluno* remove_aluno(aluno *v, int *n, int matricula){
 
 }
 
-int main()
-{
+int main(){
    int num_oper = 0, i, n = 0;
    cin >> num_oper;
    aluno *v = 0;
