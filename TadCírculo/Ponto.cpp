@@ -43,7 +43,7 @@ double pto_getX(Ponto *p){
 
 // getters: retornam os valores das coordenadas de um ponto 
 double pto_getY(Ponto *p){
-    return p->y
+    return p->y;
 }
 
 
