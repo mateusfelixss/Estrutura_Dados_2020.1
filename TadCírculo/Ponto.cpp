@@ -16,11 +16,9 @@ struct Ponto
 
 // Aloca e retorna um ponto com coordenadas (x,y)
 Ponto *pto_cria(double x, double y){
-    //Ponto *p = (Ponto *)malloc(sizeof(Ponto));
-    Ponto *p = new (std::nothrow) Ponto x;
-    Ponto *p = new (std::nothrow) Ponto y;
+    Ponto *p = new Ponto;
     if (p == nullptr) {
-      cout << "Erro: não foi possível alocar memória." << endl;
+      cout << "Nao foi possivel alocar memoria." << endl;
       return 0;
    }
     p->x = x;
@@ -38,12 +36,12 @@ void pto_libera(Ponto *p){
 
 // getters: retornam os valores das coordenadas de um ponto 
 double pto_getX(Ponto *p){
-    return p->x;
+    return *x = p->x;
 }
 
 // getters: retornam os valores das coordenadas de um ponto 
 double pto_getY(Ponto *p){
-    return p->y;
+    return *y = p->y;
 }
 
 

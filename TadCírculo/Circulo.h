@@ -2,12 +2,12 @@
 #define CIRCULO_H
 #include "Ponto.h"
 
-struct Circulo; // Declaracao do Tipo de dado exportado
+struct Circulo; // Declaracao do Tipo de dado exportado                                 CRIADA
 
-// Aloca e retorna um struct Circulo
+// Aloca e retorna um struct Circulo                                                    CRIADA
 Circulo *circ_cria(double raio, Ponto *centro);
 
-// Libera a memoria que foi alocada para o struct Circulo
+// Libera a memoria que foi alocada para o struct Circulo                               CRIADA
 void circ_libera(Circulo *c);
 
 // setters
