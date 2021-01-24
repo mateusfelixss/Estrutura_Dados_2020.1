@@ -40,9 +40,9 @@ aluno* insere_aluno(aluno *v, int *n, aluno novo){
       return 0;
    }
 
-   for(int i = 0; i < *n; i++){
-      v[i] = new aluno novo;
-   }
+   // for(int i = 0; i < *n; i++){
+   //    v[i] = new aluno novo;
+   // }
 
 }
 
