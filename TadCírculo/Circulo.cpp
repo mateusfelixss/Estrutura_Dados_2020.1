@@ -1,58 +1,43 @@
 #include <iostream>
 #include <cmath>
 #include "Circulo.h"
+#include "Ponto.h"
 using namespace std;
 
 // Declaracao do Tipo de dado exportado
 struct Circulo{
-    Ponto p;
+    Ponto *p;
     double raio;
 };
 
 // Aloca e retorna um struct Circulo
-Circulo *circ_cria(double x, double y, double raio){
+Circulo *circ_cria(double raio, Ponto *p){
     Circulo *c = new Circulo;
 
     if (c == nullptr) {
-      cout << "Nao foi possivel alocar memoria." << endl;
+      cout << "Memoria nao alocada" << endl;
       return 0;
     }
-    if (c != nullptr)
-    {
-        c->p = pto_cria(x, y);
-        if(c->p == nullptr){
-            return 0;
-        }
-        c->raio = raio;
-    }
+    c->p = p;
+    c->raio = raio;
     return c;
 }
 
-// Circulo *circ_cria(double raio, Ponto *centro){
-//     Circulo *c = new Circulo;
-
-//     if (c == nullptr) {
-//       cout << "Nao foi possivel alocar memoria." << endl;
-//       return 0;
-//     }
-//     c->p = p;
-//     c->p = raio;
-//     return c;
-// }
-
 // Libera a memoria que foi alocada para o struct Circulo                               
 void circ_libera(Circulo *c){
+    pto_libera(c->p);
     delete c;
+    cout << "Circulo liberado" << endl;
 }
 
-// setters
+// setters Raio
 void circ_setRaio(Circulo *c, double raio){
     c->raio = raio;
 }
 
-// setters
+// setters Centro
 void circ_setCentro(Circulo *c, Ponto *p){
-    c->p = pto_distancia() / 2;
+    c->p = p;
 }
 
 // setters
@@ -67,14 +52,14 @@ void circ_setY(Circulo *c, double y){
     pto_setY(c->p, y);
 }
 
-// getters
+// getters Raio
 double circ_getRaio(Circulo *c){
     return c->raio;
 }
 
-// getters
+// getters Centro
 Ponto *circ_getCentro(Circulo *c){
-    
+    return c->p;
 }
 
 // getters
