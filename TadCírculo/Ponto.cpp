@@ -8,8 +8,7 @@
 #include "Ponto.h"
 using namespace std;
 
-struct Ponto
-{
+struct Ponto{
     double x;
     double y;
 };
