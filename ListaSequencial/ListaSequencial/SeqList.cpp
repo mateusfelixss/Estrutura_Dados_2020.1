@@ -69,9 +69,9 @@ void SeqList:: clear(){
     size_vec = 0;
 }
 
-std::string toString(){
-    for ( int i = 0; i < size_vec ; i ++){
-        cout << vec[i] << " ";
+void SeqList:: toString(){
+    for ( int i = 0; i < size_vec; i ++){
+        cout << vec[i] << " "; 
     }        
 }
 

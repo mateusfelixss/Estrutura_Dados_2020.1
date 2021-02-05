@@ -51,7 +51,7 @@ public:
     // entao deve ser retornada a string "[2,5,7,8]"
     // Se, por outro lado, a lista estiver vazia, deve
     // ser retornada a string "[]"
-    std::string toString(); 
+    void toString(); 
 
     // Member function: bool replaceAt(int x, int k);
     // Troca o elemento na posicao com indice k pelo elemento x,
