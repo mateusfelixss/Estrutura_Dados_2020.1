@@ -109,7 +109,20 @@ bool SeqList:: removeAt(int k){
 }
 
 bool SeqList:: insertAt(int x, int k){
-
+    size_vec++;
+    for(int i = 0; i < size(); i++){
+        if(i == k){
+            if(((0 <= k) && (k <= size())) && size() < capacity_vec){
+                for(int j = size(); j >= k; j--){
+                    vec[j] = vec[j - 1];
+                }
+                vec[i] = x;
+                return true;
+            }
+        }
+    }
+    size_vec--;
+    return false;
 } 
 
 void SeqList:: removeAll(int x){    
