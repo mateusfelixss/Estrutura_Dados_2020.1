@@ -80,7 +80,7 @@ bool SeqList:: replaceAt(int x, int k){
         if(i == k){
             if((0 <= k) && (k <= size() - 1)){
                 vec[i] = x;
-                return true
+                return true;
             }
         }
     }
