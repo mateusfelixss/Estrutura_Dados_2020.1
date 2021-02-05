@@ -1,0 +1,18 @@
+createlist
+createlist
+addfront 1 list 0
+addfront 2 list 0
+addfront 3 list 0
+addfront 4 list 0
+addfront 5 list 0
+addfront 6 list 0
+addfront 7 list 0
+print 0
+removeall 4 list 0
+print 0
+addback 33 list 1
+addback 34 list 1
+addback 35 list 1
+removeall 34 list 1
+print 1
+exit

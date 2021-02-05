@@ -1,0 +1,19 @@
+createlist
+addback 1 list 0
+addback 2 list 0
+addback 3 list 0
+addfront 4 list 0
+addback 5 list 0
+addfront 6 list 0
+addfront 3 list 0
+addback 3 list 0
+print 0
+remove 3 list 0
+print 0
+remove 3 list 0
+print 0
+reome 3 list 0
+print 0
+remove 3 list 0
+print 0
+exit

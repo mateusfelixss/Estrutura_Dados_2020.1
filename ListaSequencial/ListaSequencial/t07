@@ -1,0 +1,12 @@
+createlist
+addback 99 list 0
+addback 99 list 0
+addback 99 list 0
+addback 99 list 0
+addback 99 list 0
+removefront 0
+empty 0
+print 0
+removeall 99 list 0
+print 0
+exit

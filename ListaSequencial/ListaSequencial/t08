@@ -1,0 +1,13 @@
+createlist
+addfront 1 list 0
+addfront 1 list 0
+addfront 1 list 0
+addfront 2 list 0
+addfront 2 list 0
+addfront 2 list 0
+print 0
+clear 0
+size 0
+print 0
+exit
+

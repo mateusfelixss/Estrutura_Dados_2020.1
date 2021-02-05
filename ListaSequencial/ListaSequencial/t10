@@ -1,0 +1,14 @@
+createlist
+addfront 1 list 0
+addfront 2 list 0
+addfront 756564 list 0
+addback -978 list 0
+addfront 3524 list 0
+addfront -1 list 0
+addfront 100 list 0
+addfront 1000 list 0
+print 0
+removeall 100 list 0
+print 0
+clear 0
+exit

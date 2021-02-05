@@ -97,13 +97,29 @@ bool SeqList:: replaceAt(int x, int k){
 }
 
 bool SeqList:: removeAt(int k){
-
+    for(int i = 0; i < size(); i++){
+        if(i == k)
+            if(((0 <= k) && (k <= size())) && size() < capacity_vec){
+                remove(vec[i]);
+                size_vec--;
+                return true;
+            }
+    }
+    return false;
 }
 
 bool SeqList:: insertAt(int x, int k){
 
 } 
 
-void SeqList:: removeAll(int x){
-
+void SeqList:: removeAll(int x){    
+    for(int i = 0; i < size() - 1; i++){
+        if(vec[i] == x){
+            vec[i] = vec[i + 1];
+            for(int j = vec[i + 1]; j < size() - 1; j++){
+                vec[j] = vec[j + 1];
+            }
+            size_vec--;
+        }
+    }
 }
