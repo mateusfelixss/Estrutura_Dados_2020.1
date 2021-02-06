@@ -104,13 +104,18 @@ bool SeqList:: replaceAt(int x, int k){
 }
 
 bool SeqList:: removeAt(int k){
-    for(int i = 0; i < size(); i++){
-        if(i == k)
-            if(((0 <= k) && (k <= size())) && size() < capacity_vec){
-                remove(vec[i]);
-                size_vec--;
+    // for(int i = 0; i < size(); i++){
+    //     if(i == k)
+    //         if(((0 <= k) && (k <= size())) && size() < capacity_vec){
+    //             remove(vec[i]);
+    //             return true;
+    //         }
+    // }
+    // return false;
+
+    if(((0 <= k) && (k <= size())) && size() < capacity_vec){
+                remove(vec[k]);
                 return true;
-            }
     }
     return false;
 }
@@ -142,4 +147,13 @@ void SeqList:: removeAll(int x){
             size_vec--;
         }
     }
+
+    for(int i = 1; i < size() - 1; i++){
+        if(vec[i] == x){
+            vec[i] = size_vec;                     
+            size_vec--;
+            i--;
+        }
+    }
+
 }
