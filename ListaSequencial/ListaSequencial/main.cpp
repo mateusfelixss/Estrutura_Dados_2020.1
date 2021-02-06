@@ -25,9 +25,10 @@ int main()
 			for(uint i = 0; i < listas.size(); ++i) {
 				delete listas[i];
 				listas[i] = nullptr;
-			}
-			listas.clear();
+				listas.clear();
 			cout << "lista removida" << endl;
+			}
+			
 			break;
 		}
 		// create [n]

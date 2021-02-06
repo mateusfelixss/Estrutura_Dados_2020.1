@@ -78,6 +78,12 @@ std::string SeqList:: toString(){                              //aqui teve modif
         cout << vec[i] << ","; 
     }        
     cout << "]";
+    
+    //   std::string s = "[";
+    // for(int i = 0; i < size_vec; i++){
+    //     s+= vec[i] + ", ";
+    // }
+    // return s + "]\n";
 }
 
 //a partir daqui começa a implementacao 
@@ -104,20 +110,20 @@ bool SeqList:: replaceAt(int x, int k){
 }
 
 bool SeqList:: removeAt(int k){
-    // for(int i = 0; i < size(); i++){
-    //     if(i == k)
-    //         if(((0 <= k) && (k <= size())) && size() < capacity_vec){
-    //             remove(vec[i]);
-    //             return true;
-    //         }
-    // }
-    // return false;
-
     if(((0 <= k) && (k <= size())) && size() < capacity_vec){
                 remove(vec[k]);
                 return true;
     }
     return false;
+    // for(int i = 0; i < size(); i++){
+    //     if(i == k)
+    //         if(((0 <= k) && (k <= size())) && size() < capacity_vec){
+    //             remove(vec[i]);
+    //             size_vec--;
+    //             return true;
+    //         }
+    // }
+    // return false;
 }
 
 bool SeqList:: insertAt(int x, int k){
@@ -138,6 +144,14 @@ bool SeqList:: insertAt(int x, int k){
 } 
 
 void SeqList:: removeAll(int x){    
+    // for(int i = 1; i < size() - 1; i++){
+    //     if(vec[i] == x){
+    //         vec[i] = size_vec;                     
+    //         size_vec--;
+    //         i--;
+    //     }
+    // }
+
     for(int i = 0; i < size() - 1; i++){
         if(vec[i] == x){
             vec[i] = vec[i + 1];
@@ -147,13 +161,4 @@ void SeqList:: removeAll(int x){
             size_vec--;
         }
     }
-
-    for(int i = 1; i < size() - 1; i++){
-        if(vec[i] == x){
-            vec[i] = size_vec;                     
-            size_vec--;
-            i--;
-        }
-    }
-
 }
