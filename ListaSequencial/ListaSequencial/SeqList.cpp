@@ -39,7 +39,9 @@ bool SeqList:: remove(int x){
             aux ++;
         }
         size_vec --;
+        return true;
     }
+    return false;
 }
     
 int SeqList:: search(int x){
@@ -48,6 +50,7 @@ int SeqList:: search(int x){
             return i;
         }
     }
+    return -1;
 }
     
 int SeqList:: at(int k){
@@ -69,11 +72,15 @@ void SeqList:: clear(){
     size_vec = 0;
 }
 
-void SeqList:: toString(){
+std::string SeqList:: toString(){                              //aqui teve modificacao no escopo da funcao
+    cout << "[";
     for ( int i = 0; i < size_vec; i ++){
-        cout << vec[i] << " "; 
+        cout << vec[i] << ","; 
     }        
+    cout << "]";
 }
+
+//a partir daqui começa a implementacao 
 
 bool SeqList:: replaceAt(int x, int k){
     for(int i = 0; i < size(); i++){

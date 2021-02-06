@@ -27,6 +27,7 @@ int main()
 				listas[i] = nullptr;
 			}
 			listas.clear();
+			cout << "lista removida" << endl;
 			break;
 		}
 		// create [n]
