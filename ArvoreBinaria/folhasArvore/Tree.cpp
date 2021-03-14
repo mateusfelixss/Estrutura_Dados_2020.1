@@ -100,7 +100,13 @@ int Tree::count_leaves() { // TODO
 }
 
 int Tree::_count_leaves(Node *node) { // TODO
-
+    if(node == nullptr)
+        return 0;
+    else
+        if((node->left == nullptr) && (node->right == nullptr))
+            return 1;
+        else
+            _count_leaves(node->left) + _count_leaves(node->right);
 }
 
 void Tree::delete_leaves() { // TODO
