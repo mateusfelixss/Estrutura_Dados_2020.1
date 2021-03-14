@@ -88,32 +88,26 @@ void Tree::_bshow(Node *node, std::string heranca) {
         _bshow(node->left, heranca + "l");
 }
 
-// int Tree::size() { //TODO
-//     return 33;
-// }
-
-int Tree::size() { // TODO
-    Node *node = new Node;
+int Tree::_size(Node *node) { // TODO
     if(node == nullptr)
         return 0;
-    return size(node->left) + size(node->right) + 1;
+    return _size(node->left) + _size(node->right) + 1;
 }
 
-// int Tree::height() { // TODO
-//     return 77;
-// }
+int Tree::size() { //TODO
+    return this->_size(_root);
+}
 
-int Tree::height() { // TODO
-    Node *node = new Node;
-0
-    if(node == n0ullptr)
+int Tree::_height(Node *node) { // TODO
+
+    if(node == nullptr)
         return -1;
 
     else{
         int contL; 
         int contR;
-        contL = height(node->left);
-        contR = height(node->right);
+        contL = _height(node->left);
+        contR = _height(node->right);
         
         if(contL > contR)
             return contL + 1;
@@ -123,5 +117,6 @@ int Tree::height() { // TODO
     
 }
 
-
-
+int Tree::height() { // TODO
+    return this->_height(_root) + 1;
+}
