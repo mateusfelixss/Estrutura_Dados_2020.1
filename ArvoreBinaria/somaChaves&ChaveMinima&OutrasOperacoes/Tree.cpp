@@ -85,7 +85,11 @@ int Tree::sum_keys() { // TODO
 }
 
 int Tree::_sum_keys(Node *node) { // TODO
-
+    int somatorio = 0;
+    if(node == nullptr)
+        return 0;
+        
+    return somatorio += node->key + _sum_keys(node->left) + _sum_keys(node->right);
 }
 
 // Para fazer essa funcao, suponha que as arvores dos testes nunca serao vazias,
